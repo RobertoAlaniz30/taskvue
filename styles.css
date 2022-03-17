@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka&family=Montserrat:wght@600&family=Varela+Round&display=swap");
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background-color: #20b5d8;
+}
+.container {
+  margin-top: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.item {
+  width: 60%;
+  background-color: #e4efb6;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-task {
+  width: 80%;
+  height: 20px;
+  border-radius: 8px;
+}
+.input-urgency {
+  width: 20%;
+  height: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+.buttom {
+  height: 40px;
+  width: 40px;
+  border-radius: 40px;
+  background-color: #20dbb1;
+}
+
+.list-tasks {
+  text-align: center;
+}
+
+.red {
+  background-color: rgb(228, 120, 120);
+}
+
+.green {
+  background-color: rgb(145, 241, 177);
+}

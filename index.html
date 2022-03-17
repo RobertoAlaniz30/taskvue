@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="StyleSheet" href="styles.css" type="text/css" media="screen" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <div class="container">
+        <div class="item">
+          <h1>✍️ Tasks ✍️</h1>
+          <input
+            class="input-task"
+            type="text"
+            placeholder="Nombre de la tarea"
+            v-model="title"
+          />
+          <br />
+          <input
+            class="input-urgency"
+            type="number"
+            placeholder="Urgencia"
+            v-model="urgency"
+          />
+          <br />
+          <button class="buttom" @click="addCourse">+</button>
+
+          <div class="list-tasks">
+            <h3>Lista de Tareas</h3>
+            <p v-show="!tasks.length">No tienes tareas pendientes (:</p>
+            <div v-show="tasks.length">
+              <ol>
+                <li v-for="c in Urgent">
+                  <span :class="{red: c.urgency >= 4, green: c.urgency < 4}">
+                    {{ c.title }} - {{ c.urgency }}.
+                  </span>
+                </li>
+              </ol>
+              <hr />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
